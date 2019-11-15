@@ -1,0 +1,10 @@
+1. Create 12 card grid (4x3) using CSS
+2. On click select a card and store a variable reference to the selected first card
+	A. On click select second card store reference as variable 
+	B. Disable the ability to click more cards
+3. Compare the 2 selected cards 
+	A. If they match add 1 score and keep face-up and enable card selection
+	B. If they don’t match, flip cards back over and enable card selection
+	C. reset the values of stored reference variables
+4. At score 6 when all cards are matched display alert "You win!”
+5. Create a restart button the refreshes game 
