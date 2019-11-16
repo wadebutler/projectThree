@@ -11,3 +11,21 @@ img {
 html {
     font-size: 62.5%;
 }
+
+img {
+    width: 100%;
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    border: 1px solid red;
+}
+
+.game {
+    display: none;
+}
+
+.instructions {
+    display: none;
+}

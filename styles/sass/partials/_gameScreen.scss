@@ -1,0 +1,47 @@
+.gameTools {
+    display: flex;
+    justify-content: space-between;
+    width: 800px;
+    margin: auto;
+    font-size: 3rem;
+}
+
+.gameBoard {
+    width: 800px;
+    height: 600px;
+    border: 1px solid red;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-around;
+    margin: auto;
+}
+
+.card {
+    width: calc((800px / 4) - 10px);
+    height: calc((600px / 4) - 10px);
+    position: relative;
+    transform-style: preserve-3d;
+    transition: 0.5s;
+}
+
+.frontFace, .backFace {
+    position: absolute;
+    backface-visibility: hidden;
+    width: calc((800px / 4) - 10px);
+    height: calc((600px / 4) - 10px);
+}
+
+.backFace {
+    background: purple;
+}
+
+.frontFace {
+    transform: rotateY(180deg);
+    background: blue;
+    padding-top: 35%;
+}
+
+.flip {
+    transform: rotateY(180deg);
+}

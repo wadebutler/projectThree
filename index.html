@@ -8,52 +8,100 @@
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
-    <main>
-        <!-- <section>
+    <header>
+        <section class="homeScreen">
             <h1>Match Game</h1>
-        </section> -->
-
-        <button class="reset">Reset</button>
-
-        <p>Score: <span class="score">0</span></p>
-
-        <section class="gameBoard">
-            <div class="card 1" data-number="1"> 
-                <div class="frontFace">1</div>
-                <div class="backFace">1</div>
-            </div>
-            <div class="card" data-number="1">
-                <div class="frontFace">1</div>
-                <div class="backFace">1</div>
-            </div>
-
-            <div class="card 2" data-number="2">
-                <div class="frontFace">2</div>
-                <div class="backFace">2</div>
-            </div>
-            <div class="card" data-number="2">
-                <div class="frontFace">2</div>
-                <div class="backFace">2</div>
-            </div>
-
-            <div class="card" data-number="3">
-                <div class="frontFace">3</div>
-                <div class="backFace">3</div>
-            </div>
-            <div class="card" data-number="3">
-                <div class="frontFace">3</div>
-                <div class="backFace">3</div>
-            </div>
-
-            <div class="card" data-number="4">
-                <div class="frontFace">4</div>
-                <div class="backFace">4</div>
-            </div>
-            <div class="card" data-number="4">
-                <div class="frontFace">4</div>
-                <div class="backFace">4</div>
+            <div>
+                <button onclick="gameSwitch()" class="displayButton">Play</button>
+                <button onclick="instructionSwitch()" class="instructionDisplay">instructions</button>
             </div>
         </section>
+        <section class="instructionScreen">
+            <h2>instructions</h2>
+            <p>select two cards if they match you get a point, collect 8 points to win the game!</p>
+            <button onclick="gameSwitch()" class="displayButton">Play</button>
+        </section>
+    </header>
+    <main>
+        <div class="game">
+            <section class="gameTools">
+                <button class="reset">Reset</button>
+                <p>Score: <span class="score">0</span></p>
+                <button onclick="goHome()" class="return">Home</button>
+            </section>
+            <section class="gameBoard">
+                <div class="card" data-number="1">
+                    <div class="frontFace">1</div>
+                    <button class="backFace">1</button>
+                </div>
+                <div class="card" data-number="1">
+                    <div class="frontFace">1</div>
+                    <button class="backFace">1</button>
+                </div>
+            
+                <div class="card" data-number="2">
+                    <div class="frontFace">2</div>
+                    <button class="backFace">2</button>
+                </div>
+                <div class="card" data-number="2">
+                    <div class="frontFace">2</div>
+                    <button class="backFace">2</button>
+                </div>
+            
+                <div class="card" data-number="3">
+                    <div class="frontFace">3</div>
+                    <button class="backFace">3</button>
+                </div>
+                <div class="card" data-number="3">
+                    <div class="frontFace">3</div>
+                    <button class="backFace">3</button>
+                </div>
+            
+                <div class="card" data-number="4">
+                    <div class="frontFace">4</div>
+                    <button class="backFace">4</button>
+                </div>
+                <div class="card" data-number="4">
+                    <div class="frontFace">4</div>
+                    <button class="backFace">4</button>
+                </div>
+                <div class="card" data-number="5">
+                    <div class="frontFace">5</div>
+                    <button class="backFace">5</button>
+                </div>
+                <div class="card" data-number="5">
+                    <div class="frontFace">5</div>
+                    <button class="backFace">5</button>
+                </div>
+            
+                <div class="card" data-number="6">
+                    <div class="frontFace">6</div>
+                    <button class="backFace">6</button>
+                </div>
+                <div class="card" data-number="6">
+                    <div class="frontFace">6</div>
+                    <button class="backFace">6</button>
+                </div>
+            
+                <div class="card" data-number="7">
+                    <div class="frontFace">7</div>
+                    <button class="backFace">7</button>
+                </div>
+                <div class="card" data-number="7">
+                    <div class="frontFace">7</div>
+                    <button class="backFace">7</button>
+                </div>
+            
+                <div class="card" data-number="8">
+                    <div class="frontFace">8</div>
+                    <button class="backFace">8</button>
+                </div>
+                <div class="card" data-number="8">
+                    <div class="frontFace">8</div>
+                    <button class="backFace">8</button>
+                </div>
+            </section>
+        </div>
     </main>
 
     <script src='https://code.jquery.com/jquery-3.2.1.min.js'></script>

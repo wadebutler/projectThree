@@ -193,57 +193,121 @@ html {
   font-size: 62.5%;
 }
 
-h1 {
-  text-align: center;
+img {
+  width: 100%;
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  border: 1px solid red;
+}
+
+.game {
+  display: none;
+}
+
+.instructions {
+  display: none;
+}
+
+.gameTools {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 800px;
+  margin: auto;
+  font-size: 3rem;
 }
 
 .gameBoard {
-  width: 1280px;
-  height: 640px;
+  width: 800px;
+  height: 600px;
   border: 1px solid red;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-perspective: 100%;
-          perspective: 100%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-line-pack: distribute;
+      align-content: space-around;
   margin: auto;
 }
 
 .card {
-  width: calc(300px - 20px);
-  height: calc(300px - 20px);
+  width: calc((800px / 4) - 10px);
+  height: calc((600px / 4) - 10px);
   position: relative;
-  margin: 10px;
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  margin: auto;
 }
 
 .frontFace, .backFace {
   position: absolute;
-  border: 1px solid blue;
-  background: purple;
-  padding: 20px;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
-  width: calc(300px - 20px);
-  height: calc(300px - 20px);
-  text-align: center;
-  font-size: 6rem;
+  width: calc((800px / 4) - 10px);
+  height: calc((600px / 4) - 10px);
+}
+
+.backFace {
+  background: purple;
 }
 
 .frontFace {
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
-  color: red;
   background: blue;
+  padding-top: 35%;
 }
 
-.card.flip {
+.flip {
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
+}
+
+.homeScreen {
+  background: blue;
+  height: 100vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.instructionScreen {
+  background: blue;
+  height: 100vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: none;
 }

@@ -1,11 +1,16 @@
 const cards = document.querySelectorAll(".card");
+const gameScreen = document.querySelector(".game");
+const homeScreen = document.querySelector(".homeScreen");
+const instructionScreen = document.querySelector(".instructionScreen");
 let flippedCard = false;
 let boardLock = false;
 let score = 0;
 let firstCard;
 let secondCard;
 
-// adds flip class to html which flips the cards
+//on click functionallity
+cards.forEach(card => card.addEventListener("click", flipCard))
+
 function flipCard() {
     debug()
     this.classList.add("flip");
@@ -20,6 +25,7 @@ function flipCard() {
         if (firstCard.dataset.number === secondCard.dataset.number) {
             firstCard.removeEventListener("click", flipCard);
             secondCard.removeEventListener("click", flipCard);
+            
             scoreControl()
             resetCards();
 
@@ -50,7 +56,7 @@ function scoreControl() {
 
     document.querySelector(".score").textContent = score;
 
-    if (score === 4) {
+    if (score === 8) {
         console.log("you win!");
     }
 }
@@ -63,13 +69,38 @@ function resetCards() {
 }
 
 function shuffle() {
-    cards.forEach(card => {
-        let randomSpot = Math.floor(Math.random() * 8);
-        card.style.order = randomSpot;
-    })
+    $(function () {
+        var parent = $(".gameBoard");
+        var divs = parent.children();
+        while (divs.length) {
+            parent.append(divs.splice(Math.floor(Math.random() * divs.length), 1)[0]);
+        }
+    });
 }
 
-cards.forEach(card => card.addEventListener("click", flipCard))
+// game screen switching controls
+function gameSwitch() {
+    if (gameScreen.style.display = "none") {
+        gameScreen.style.display = "block";
+        homeScreen.style.display = "none";
+        instructionScreen.style.display = "none";
+    }
+}
+
+function instructionSwitch() {
+    if (instructionScreen.style.display = "none") {
+        instructionScreen.style.display = "flex";
+        homeScreen.style.display = "none";
+
+    }
+}
+
+function goHome() {
+    if (gameScreen.style.display = "block") {
+        gameScreen.style.display = "none";
+        homeScreen.style.display = "flex";
+    }
+}
 
 $(document).ready(function () {
     shuffle();
