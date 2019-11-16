@@ -4,22 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Match Game</title>
+    <title>Treasure Hunt!</title>
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
     <header>
         <section class="homeScreen">
-            <h1>Match Game</h1>
+            <h1>Treasure Hunt!</h1>
             <div>
                 <button onclick="gameSwitch()" class="displayButton">Play</button>
-                <button onclick="instructionSwitch()" class="instructionDisplay">instructions</button>
+                <button onclick="instructionSwitch()" class="instructionDisplay">Instructions</button>
             </div>
         </section>
         <section class="instructionScreen">
-            <h2>instructions</h2>
-            <p>select two cards if they match you get a point, collect 8 points to win the game!</p>
+            <h2>Instructions</h2>
+            <p>select 2 treasure chests, if the treasure inside matches you get to keep it! find all the treasure to win!</p>
             <button onclick="gameSwitch()" class="displayButton">Play</button>
+        </section>
+        <section class="winScreen">
+            <h2>YOU WIN!</h2>
+            <button class="playAgain" onclick="playAgain()">Play Again?</button>
         </section>
     </header>
     <main>
@@ -31,73 +35,73 @@
             </section>
             <section class="gameBoard">
                 <div class="card" data-number="1">
-                    <div class="frontFace">1</div>
+                    <div class="frontFace"><img src="assets/treasures/cross.png" alt="a gold necklace with cross pendant"></div>
                     <button class="backFace">1</button>
                 </div>
                 <div class="card" data-number="1">
-                    <div class="frontFace">1</div>
+                    <div class="frontFace"><img src="assets/treasures/cross.png" alt="a gold necklace with cross pendant"></div>
                     <button class="backFace">1</button>
                 </div>
             
                 <div class="card" data-number="2">
-                    <div class="frontFace">2</div>
+                    <div class="frontFace"><img src="assets/treasures/crown_with_gems.png" alt="a gold crown with red gems"></div>
                     <button class="backFace">2</button>
                 </div>
                 <div class="card" data-number="2">
-                    <div class="frontFace">2</div>
+                    <div class="frontFace"><img src="assets/treasures/crown_with_gems.png" alt="a gold crown with red gems"></div>
                     <button class="backFace">2</button>
                 </div>
             
                 <div class="card" data-number="3">
-                    <div class="frontFace">3</div>
+                    <div class="frontFace"><img src="assets/treasures/goblet.png" alt="a gold goblet with red jems"></div>
                     <button class="backFace">3</button>
                 </div>
                 <div class="card" data-number="3">
-                    <div class="frontFace">3</div>
+                    <div class="frontFace"><img src="assets/treasures/goblet.png" alt="a gold goblet with red jems"></div>
                     <button class="backFace">3</button>
                 </div>
             
                 <div class="card" data-number="4">
-                    <div class="frontFace">4</div>
+                    <div class="frontFace"><img src="assets/treasures/money.png" alt="a pile of gold coins"></div>
                     <button class="backFace">4</button>
                 </div>
                 <div class="card" data-number="4">
-                    <div class="frontFace">4</div>
+                    <div class="frontFace"><img src="assets/treasures/money.png" alt="a pile of gold coins"></div>
                     <button class="backFace">4</button>
                 </div>
                 <div class="card" data-number="5">
-                    <div class="frontFace">5</div>
+                    <div class="frontFace"><img src="assets/treasures/faberge_egg.png" alt="a gold egg"></div>
                     <button class="backFace">5</button>
                 </div>
                 <div class="card" data-number="5">
-                    <div class="frontFace">5</div>
+                    <div class="frontFace"><img src="assets/treasures/faberge_egg.png" alt="a gold egg"></div>
                     <button class="backFace">5</button>
                 </div>
             
                 <div class="card" data-number="6">
-                    <div class="frontFace">6</div>
+                    <div class="frontFace"><img src="assets/treasures/locket.png" alt="a gold locket with a shilouette of a women"></div>
                     <button class="backFace">6</button>
                 </div>
                 <div class="card" data-number="6">
-                    <div class="frontFace">6</div>
+                    <div class="frontFace"><img src="assets/treasures/locket.png" alt="a gold locket with a shilouette of a women"></div>
                     <button class="backFace">6</button>
                 </div>
             
                 <div class="card" data-number="7">
-                    <div class="frontFace">7</div>
+                    <div class="frontFace"><img src="assets/treasures/painting.png" alt="a portrait of a scenery with a gold frame"></div>
                     <button class="backFace">7</button>
                 </div>
                 <div class="card" data-number="7">
-                    <div class="frontFace">7</div>
+                    <div class="frontFace"><img src="assets/treasures/painting.png" alt="a portrait of a scenery with a gold frame"></div>
                     <button class="backFace">7</button>
                 </div>
             
                 <div class="card" data-number="8">
-                    <div class="frontFace">8</div>
+                    <div class="frontFace"><img src="assets/treasures/sword.png" alt="an ornate sword"></div>
                     <button class="backFace">8</button>
                 </div>
                 <div class="card" data-number="8">
-                    <div class="frontFace">8</div>
+                    <div class="frontFace"><img src="assets/treasures/sword.png" alt="an ornate sword"></div>
                     <button class="backFace">8</button>
                 </div>
             </section>

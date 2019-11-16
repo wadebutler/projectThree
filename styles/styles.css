@@ -191,6 +191,7 @@ img {
 
 html {
   font-size: 62.5%;
+  color: white;
 }
 
 img {
@@ -207,8 +208,12 @@ img {
   display: none;
 }
 
-.instructions {
-  display: none;
+.game {
+  background: url(../assets/pirateship.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  height: 100vh;
 }
 
 .gameTools {
@@ -218,15 +223,15 @@ img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 800px;
+  width: 590px;
   margin: auto;
   font-size: 3rem;
+  padding-top: 2.5%;
 }
 
 .gameBoard {
-  width: 800px;
+  width: 600px;
   height: 600px;
-  border: 1px solid red;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -240,7 +245,7 @@ img {
 }
 
 .card {
-  width: calc((800px / 4) - 10px);
+  width: calc((600px / 4) - 10px);
   height: calc((600px / 4) - 10px);
   position: relative;
   -webkit-transform-style: preserve-3d;
@@ -253,19 +258,21 @@ img {
   position: absolute;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
-  width: calc((800px / 4) - 10px);
+  width: calc((600px / 4) - 10px);
   height: calc((600px / 4) - 10px);
 }
 
 .backFace {
-  background: purple;
+  background: url(../assets/chest.jpg);
+  background-size: cover;
+  background-position: center;
+  font-size: 4rem;
 }
 
 .frontFace {
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
-  background: blue;
-  padding-top: 35%;
+  background: #005b59;
 }
 
 .flip {
@@ -274,7 +281,9 @@ img {
 }
 
 .homeScreen {
-  background: blue;
+  background: url(../assets/pirateship.jpg);
+  background-size: cover;
+  background-position: center;
   height: 100vh;
   width: 100vw;
   display: -webkit-box;
@@ -293,7 +302,9 @@ img {
 }
 
 .instructionScreen {
-  background: blue;
+  background: url(../assets/pirateship.jpg);
+  background-size: cover;
+  background-position: center;
   height: 100vh;
   width: 100vw;
   display: -webkit-box;
@@ -310,4 +321,71 @@ img {
       -ms-flex-align: center;
           align-items: center;
   display: none;
+}
+
+.winScreen {
+  background: url(../assets/pirateship.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .gameBoard {
+    width: 500px;
+    height: 500px;
+  }
+  .gameTools {
+    width: 490px;
+    padding-top: 10%;
+  }
+  .card, .frontFace, .backFace {
+    width: calc((500px / 4) - 10px);
+    height: calc((500px / 4) - 10px);
+  }
+}
+
+@media (max-width: 600px) {
+  .gameBoard {
+    width: 400px;
+    height: 400px;
+  }
+  .gameTools {
+    width: 390px;
+    padding-top: 20%;
+  }
+  .card, .frontFace, .backFace {
+    width: calc((400px / 4) - 10px);
+    height: calc((400px / 4) - 10px);
+  }
+}
+
+@media (max-width: 450px) {
+  .gameBoard {
+    width: 300px;
+    height: 300px;
+  }
+  .gameTools {
+    width: 290px;
+    padding-top: 30%;
+  }
+  .card, .frontFace, .backFace {
+    width: calc((300px / 4) - 10px);
+    height: calc((300px / 4) - 10px);
+  }
 }

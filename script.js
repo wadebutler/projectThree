@@ -1,6 +1,7 @@
 const cards = document.querySelectorAll(".card");
 const gameScreen = document.querySelector(".game");
 const homeScreen = document.querySelector(".homeScreen");
+const winScreen = document.querySelector(".winScreen");
 const instructionScreen = document.querySelector(".instructionScreen");
 let flippedCard = false;
 let boardLock = false;
@@ -8,11 +9,13 @@ let score = 0;
 let firstCard;
 let secondCard;
 
-//on click functionallity
+// GAME FUNCTIONALITY START
 cards.forEach(card => card.addEventListener("click", flipCard))
 
 function flipCard() {
-    debug()
+    if (boardLock === true) { return }
+    if (this === firstCard) { return }
+
     this.classList.add("flip");
 
     if (flippedCard === false) {
@@ -35,11 +38,6 @@ function flipCard() {
     }
 }
 
-function debug() {
-    if (boardLock === true) { return }
-    if (this === firstCard) { return }
-}
-
 function missMatchReset() {
     boardLock = true;
 
@@ -57,7 +55,7 @@ function scoreControl() {
     document.querySelector(".score").textContent = score;
 
     if (score === 8) {
-        console.log("you win!");
+        gameWin();
     }
 }
 
@@ -78,12 +76,27 @@ function shuffle() {
     });
 }
 
-// game screen switching controls
+function playAgain() {
+    if (winScreen.style.display = "block") {
+        winScreen.style.display = "none"
+        gameScreen.style.display = "block"
+        cards.forEach(card => card.classList.remove("flip"));
+        resetCards();
+        shuffle();
+        score = 0;
+        document.querySelector(".score").textContent = score;
+        cards.forEach(card => card.addEventListener("click", flipCard))
+    }
+}
+// GAME FUNCTIONALITY END
+
+// GAME SCREEN SWITCH START
 function gameSwitch() {
     if (gameScreen.style.display = "none") {
         gameScreen.style.display = "block";
         homeScreen.style.display = "none";
         instructionScreen.style.display = "none";
+        winScreen.style.display = "none";
     }
 }
 
@@ -102,6 +115,13 @@ function goHome() {
     }
 }
 
+function gameWin() {
+    gameScreen.style.display = "none";
+    winScreen.style.display = "flex";
+}
+// GAME SCREEN SWITCH END
+
+// ON LOAD
 $(document).ready(function () {
     shuffle();
 
@@ -109,5 +129,6 @@ $(document).ready(function () {
     $(".reset").click(() => {
         $(".card").removeClass("flip");
         shuffle();
+        cards.forEach(card => card.addEventListener("click", flipCard))
     })
 });

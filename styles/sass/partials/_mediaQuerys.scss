@@ -1,0 +1,50 @@
+@media (max-width: 900px) {
+    .gameBoard {
+        width: 500px;
+        height: 500px;
+    }
+
+    .gameTools {
+        width: 490px;
+        padding-top: 10%;
+    }
+
+    .card, .frontFace, .backFace {
+        width: calc((500px / 4) - 10px);
+        height: calc((500px / 4) - 10px);
+    }
+}
+
+@media (max-width: 600px) {
+    .gameBoard {
+        width: 400px;
+        height: 400px;
+    }
+
+    .gameTools {
+        width: 390px;
+        padding-top: 20%;
+    }
+
+    .card, .frontFace, .backFace {
+        width: calc((400px / 4) - 10px);
+        height: calc((400px / 4) - 10px);
+    }
+}
+
+@media (max-width: 450px) {
+    .gameBoard {
+        width: 300px;
+        height: 300px;
+    }
+
+    .gameTools {
+        width: 290px;
+        padding-top: 30%;
+    }
+
+    .card, .frontFace, .backFace {
+        width: calc((300px / 4) - 10px);
+        height: calc((300px / 4) - 10px);
+    }
+}
