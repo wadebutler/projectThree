@@ -1,4 +1,8 @@
 @media (max-width: 900px) {
+    html {
+        font-size: 50%;
+    }
+
     .gameBoard {
         width: 500px;
         height: 500px;
@@ -6,16 +10,37 @@
 
     .gameTools {
         width: 490px;
-        padding-top: 10%;
+        padding-top: 5%;
     }
 
     .card, .frontFace, .backFace {
         width: calc((500px / 4) - 10px);
         height: calc((500px / 4) - 10px);
     }
+
+    .homeScreen {
+
+        .buttonBox {
+            width: 65%;
+        }
+    }
 }
 
+
+@media (max-width: 700px) {
+    .homeScreen {
+        h1 {
+            font-size: 8rem;
+        }
+    }
+}
+
+
 @media (max-width: 600px) {
+    html {
+        font-size: 40%;
+    }
+
     .gameBoard {
         width: 400px;
         height: 400px;
@@ -23,16 +48,36 @@
 
     .gameTools {
         width: 390px;
-        padding-top: 20%;
+        padding-top: 18%;
     }
 
     .card, .frontFace, .backFace {
         width: calc((400px / 4) - 10px);
         height: calc((400px / 4) - 10px);
     }
+
+    .homeScreen {
+
+        h1 {
+            font-size: 8rem;
+        }
+        
+        .buttonBox {
+            width: 70%;
+        }
+    }
 }
 
 @media (max-width: 450px) {
+    html {
+        font-size: 30%;
+    }
+
+    button {
+        font-size: 4rem;
+        padding: 5px;
+    }
+
     .gameBoard {
         width: 300px;
         height: 300px;

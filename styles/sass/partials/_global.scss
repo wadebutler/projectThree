@@ -11,6 +11,7 @@ img {
 html {
     font-size: 62.5%;
     color: white;
+    font-family: treasure;
 }
 
 img {
@@ -25,4 +26,22 @@ img {
 
 .game {
     display: none;
+}
+
+button {
+    font-size: 5rem;
+    color: rgb(170, 126, 12);
+    background: gold;
+    border: none;
+    padding: 10px;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+h2 {
+    font-size: 8rem;
+}
+
+p {
+    font-size: 4rem;
 }

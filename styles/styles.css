@@ -192,6 +192,7 @@ img {
 html {
   font-size: 62.5%;
   color: white;
+  font-family: treasure;
 }
 
 img {
@@ -206,6 +207,24 @@ img {
 
 .game {
   display: none;
+}
+
+button {
+  font-size: 5rem;
+  color: #aa7e0c;
+  background: gold;
+  border: none;
+  padding: 10px;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+h2 {
+  font-size: 8rem;
+}
+
+p {
+  font-size: 4rem;
 }
 
 .game {
@@ -226,7 +245,6 @@ img {
   width: 590px;
   margin: auto;
   font-size: 3rem;
-  padding-top: 2.5%;
 }
 
 .gameBoard {
@@ -301,6 +319,21 @@ img {
           align-items: center;
 }
 
+.homeScreen h1 {
+  font-size: 11rem;
+  letter-spacing: 4px;
+}
+
+.homeScreen .buttonBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 55%;
+}
+
 .instructionScreen {
   background: url(../assets/pirateship.jpg);
   background-size: cover;
@@ -321,6 +354,11 @@ img {
       -ms-flex-align: center;
           align-items: center;
   display: none;
+}
+
+.instructionScreen p {
+  width: 60%;
+  padding: 2.5%;
 }
 
 .winScreen {
@@ -345,37 +383,69 @@ img {
   display: none;
 }
 
+.winScreen h2 {
+  padding: 5%;
+}
+
 @media (max-width: 900px) {
+  html {
+    font-size: 50%;
+  }
   .gameBoard {
     width: 500px;
     height: 500px;
   }
   .gameTools {
     width: 490px;
-    padding-top: 10%;
+    padding-top: 5%;
   }
   .card, .frontFace, .backFace {
     width: calc((500px / 4) - 10px);
     height: calc((500px / 4) - 10px);
   }
+  .homeScreen .buttonBox {
+    width: 65%;
+  }
+}
+
+@media (max-width: 700px) {
+  .homeScreen h1 {
+    font-size: 8rem;
+  }
 }
 
 @media (max-width: 600px) {
+  html {
+    font-size: 40%;
+  }
   .gameBoard {
     width: 400px;
     height: 400px;
   }
   .gameTools {
     width: 390px;
-    padding-top: 20%;
+    padding-top: 18%;
   }
   .card, .frontFace, .backFace {
     width: calc((400px / 4) - 10px);
     height: calc((400px / 4) - 10px);
   }
+  .homeScreen h1 {
+    font-size: 8rem;
+  }
+  .homeScreen .buttonBox {
+    width: 70%;
+  }
 }
 
 @media (max-width: 450px) {
+  html {
+    font-size: 30%;
+  }
+  button {
+    font-size: 4rem;
+    padding: 5px;
+  }
   .gameBoard {
     width: 300px;
     height: 300px;
