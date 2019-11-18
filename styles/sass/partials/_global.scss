@@ -32,10 +32,17 @@ button {
     font-size: 5rem;
     color: rgb(170, 126, 12);
     background: gold;
-    border: none;
     padding: 10px;
     letter-spacing: 2px;
     cursor: pointer;
+    transition: 0.5s;
+    border: none;
+    border-radius: 5px;
+
+    &:hover, &:focus {
+        color: gold;
+        background: rgb(170, 126, 12);
+    }
 }
 
 h2 {

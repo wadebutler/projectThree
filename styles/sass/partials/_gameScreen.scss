@@ -11,6 +11,11 @@
     width: 590px;
     margin: auto;
     font-size: 3rem;
+    
+    p {
+        display: flex;
+        align-items: center;
+    }
 }
 
 .gameBoard {
@@ -42,12 +47,18 @@
     background: url(../assets/chest.jpg);
     background-size: cover;
     background-position: center;
-    font-size: 4rem;
+
+    &:hover, &:focus {
+        transform: scale(1.05);
+        background: url(../assets/chest.jpg);
+        background-size: cover;
+        background-position: center;
+    }
 }
 
 .frontFace {
     transform: rotateY(180deg);
-    background: $primaryColor;
+    background: rgb(0, 91, 89);
 }
 
 .flip {

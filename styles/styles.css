@@ -213,10 +213,18 @@ button {
   font-size: 5rem;
   color: #aa7e0c;
   background: gold;
-  border: none;
   padding: 10px;
   letter-spacing: 2px;
   cursor: pointer;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  border: none;
+  border-radius: 5px;
+}
+
+button:hover, button:focus {
+  color: gold;
+  background: #aa7e0c;
 }
 
 h2 {
@@ -245,6 +253,15 @@ p {
   width: 590px;
   margin: auto;
   font-size: 3rem;
+}
+
+.gameTools p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .gameBoard {
@@ -284,7 +301,14 @@ p {
   background: url(../assets/chest.jpg);
   background-size: cover;
   background-position: center;
-  font-size: 4rem;
+}
+
+.backFace:hover, .backFace:focus {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  background: url(../assets/chest.jpg);
+  background-size: cover;
+  background-position: center;
 }
 
 .frontFace {
