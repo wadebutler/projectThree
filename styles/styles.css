@@ -344,6 +344,10 @@ p {
           transform: rotateY(180deg);
 }
 
+.hide {
+  visibility: hidden;
+}
+
 .homeScreen {
   background: url(../assets/pirateship.jpg);
   background-size: cover;
