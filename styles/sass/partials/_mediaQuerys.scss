@@ -17,13 +17,6 @@
         width: calc((500px / 4) - 10px);
         height: calc((500px / 4) - 10px);
     }
-
-    .homeScreen {
-
-        .buttonBox {
-            width: 65%;
-        }
-    }
 }
 
 
@@ -61,21 +54,12 @@
         h1 {
             font-size: 8rem;
         }
-        
-        .buttonBox {
-            width: 70%;
-        }
     }
 }
 
 @media (max-width: 450px) {
     html {
         font-size: 30%;
-    }
-
-    button {
-        font-size: 4rem;
-        padding: 5px;
     }
 
     .gameBoard {

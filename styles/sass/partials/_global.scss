@@ -29,26 +29,21 @@ img {
 }
 
 .shine {
-    border-radius: 5px;
     position: relative;
     overflow: hidden;
 
     &:hover::before {
-        left: 200px;
+        left: 250px;
     }
-
-    // &:focus::before {
-    //     background: rgba(255, 255, 255, 0.2);
-    // }
 }
 
 .shine::before {
     content: " ";
-    background-image: linear-gradient(-45deg, transparent 33%, rgba(255, 255, 255, 0.6) 50%, transparent 66%);
+    background-image: linear-gradient(-65deg, transparent 33%, rgba(255, 255, 255, 0.6) 50%, transparent 66%);
     width: 300px;
     height: 100px;
     position: absolute;
-    left: -250px;
+    left: -275px;
     transition: 0.8s;
 }
 
@@ -62,9 +57,9 @@ button {
     cursor: pointer;
     transition: 0.5s;
     border: none;
-    border-radius: 5px;
-    width: 100%;
     border: 2px solid rgba(81, 203, 238, 0);
+    width: 100%;
+    border-radius: 5px;
 
     &:focus {
         color: gold;
