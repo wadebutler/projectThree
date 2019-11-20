@@ -404,11 +404,12 @@ p {
       -ms-flex-align: center;
           align-items: center;
   display: none;
+  text-align: center;
 }
 
 .instructionScreen p {
   width: 60%;
-  padding: 2.5%;
+  padding: 1%;
 }
 
 .winScreen {
