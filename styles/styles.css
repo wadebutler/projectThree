@@ -247,6 +247,8 @@ button {
 button:focus {
   color: gold;
   background: #aa7e0c;
+  border: 2px solid #51cbee;
+  outline: none;
 }
 
 h2 {
