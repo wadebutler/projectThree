@@ -202,7 +202,6 @@ img {
 .wrapper {
   max-width: 1200px;
   margin: 0 auto;
-  border: 1px solid red;
 }
 
 .game {
@@ -216,6 +215,7 @@ img {
 
 .shine:hover::before {
   left: 250px;
+  cursor: pointer;
 }
 
 .shine::before {
@@ -231,7 +231,7 @@ img {
 
 button {
   font-size: 5rem;
-  color: #aa7e0c;
+  color: #644800;
   background: gold;
   padding: 10px;
   letter-spacing: 2px;
@@ -313,6 +313,7 @@ p {
 
 .frontFace, .backFace {
   position: absolute;
+  border-radius: 10px;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
   width: calc((600px / 4) - 10px);
@@ -372,6 +373,7 @@ p {
 .homeScreen h1 {
   font-size: 11rem;
   letter-spacing: 4px;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 .homeScreen .buttonBox {
@@ -440,6 +442,7 @@ p {
 
 .winScreen h2 {
   padding: 5%;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 @media (max-width: 900px) {

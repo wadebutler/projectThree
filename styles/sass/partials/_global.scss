@@ -21,7 +21,6 @@ img {
 .wrapper {
     max-width: 1200px;
     margin: 0 auto;
-    border: 1px solid red;
 }
 
 .game {
@@ -34,6 +33,7 @@ img {
 
     &:hover::before {
         left: 250px;
+        cursor: pointer;
     }
 }
 
@@ -47,10 +47,9 @@ img {
     transition: 0.8s;
 }
 
-// add focus to buttons
 button {
     font-size: 5rem;
-    color: rgb(170, 126, 12);
+    color: #644800;
     background: gold;
     padding: 10px;
     letter-spacing: 2px;

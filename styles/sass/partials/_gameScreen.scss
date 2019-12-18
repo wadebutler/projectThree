@@ -38,6 +38,7 @@
 
 .frontFace, .backFace {
     position: absolute;
+    border-radius: 10px;
     backface-visibility: hidden;
     width: calc((600px / 4) - 10px);
     height: calc((600px / 4) - 10px);
